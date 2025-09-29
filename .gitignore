@@ -1,0 +1,25 @@
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.userprefs
+
+# Rider / IntelliJ
+.idea/
+*.sln.iml
+*.iml
+
+# NuGet
+*.nupkg
+*.snupkg
+packages/
+project.lock.json
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
