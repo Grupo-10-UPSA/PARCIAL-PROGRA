@@ -9,7 +9,7 @@ namespace PrimerParcial.Data
             : base(options)
         {
         }
-
+//test 
         public DbSet<SupportTicket> SupportTickets { get; set; } = null!;
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
