@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Usuario\\OneDrive\\Escritorio\\TEST-PARCIAL\\PARCIAL-PROGRA\\PrimerParcial\\PrimerParcial.csproj": {}
+    "D:\\Documentos\\Desktop\\PARCIAL\\PARCIAL-PROGRA\\PrimerParcial\\PrimerParcial.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Usuario\\OneDrive\\Escritorio\\TEST-PARCIAL\\PARCIAL-PROGRA\\PrimerParcial\\PrimerParcial.csproj": {
+    "D:\\Documentos\\Desktop\\PARCIAL\\PARCIAL-PROGRA\\PrimerParcial\\PrimerParcial.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\TEST-PARCIAL\\PARCIAL-PROGRA\\PrimerParcial\\PrimerParcial.csproj",
+        "projectUniqueName": "D:\\Documentos\\Desktop\\PARCIAL\\PARCIAL-PROGRA\\PrimerParcial\\PrimerParcial.csproj",
         "projectName": "PrimerParcial",
-        "projectPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\TEST-PARCIAL\\PARCIAL-PROGRA\\PrimerParcial\\PrimerParcial.csproj",
-        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\TEST-PARCIAL\\PARCIAL-PROGRA\\PrimerParcial\\obj\\",
+        "projectPath": "D:\\Documentos\\Desktop\\PARCIAL\\PARCIAL-PROGRA\\PrimerParcial\\PrimerParcial.csproj",
+        "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
+        "outputPath": "D:\\Documentos\\Desktop\\PARCIAL\\PARCIAL-PROGRA\\PrimerParcial\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -104,7 +102,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Users\\Usuario\\.dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Users\\Dell\\.dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
