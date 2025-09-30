@@ -5759,19 +5759,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Dell\\.nuget\\packages\\": {}
+    "C:\\Users\\mateo\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Documentos\\Desktop\\PARCIAL\\PARCIAL-PROGRA\\PrimerParcial\\PrimerParcial.csproj",
+      "projectUniqueName": "C:\\Users\\mateo\\OneDrive\\Escritorio\\SALVADA\\PARCIAL-PROGRA\\PrimerParcial\\PrimerParcial.csproj",
       "projectName": "PrimerParcial",
-      "projectPath": "D:\\Documentos\\Desktop\\PARCIAL\\PARCIAL-PROGRA\\PrimerParcial\\PrimerParcial.csproj",
-      "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-      "outputPath": "D:\\Documentos\\Desktop\\PARCIAL\\PARCIAL-PROGRA\\PrimerParcial\\obj\\",
+      "projectPath": "C:\\Users\\mateo\\OneDrive\\Escritorio\\SALVADA\\PARCIAL-PROGRA\\PrimerParcial\\PrimerParcial.csproj",
+      "packagesPath": "C:\\Users\\mateo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\mateo\\OneDrive\\Escritorio\\SALVADA\\PARCIAL-PROGRA\\PrimerParcial\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\mateo\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
@@ -5859,7 +5859,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Users\\Dell\\.dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

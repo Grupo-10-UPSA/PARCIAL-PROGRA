@@ -27,8 +27,13 @@ namespace PrimerParcial.Controllers
         [HttpPost]
         public async Task<ActionResult<Product>> Post(Product product)
         {
+            product.CreatedAt = DateTime.UtcNow;
+            product.UpdatedAt = null;
+            product.IsActive = true;
+
             _context.Products.Add(product);
             await _context.SaveChangesAsync();
+
             return CreatedAtAction(nameof(Get), new { id = product.Id }, product);
         }
 
@@ -36,13 +41,19 @@ namespace PrimerParcial.Controllers
         public async Task<IActionResult> Put(int id, Product product)
         {
             if (id != product.Id) return BadRequest();
-            _context.Entry(product).State = EntityState.Modified;
-            try { await _context.SaveChangesAsync(); }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!await _context.Products.AnyAsync(e => e.Id == id)) return NotFound();
-                throw;
-            }
+
+            var existing = await _context.Products.FindAsync(id);
+            if (existing == null) return NotFound();
+
+            existing.Name = product.Name;
+            existing.Description = product.Description;
+            existing.Price = product.Price;
+            existing.Stock = product.Stock;
+            existing.IsActive = product.IsActive;
+            existing.UpdatedAt = DateTime.UtcNow;
+
+            await _context.SaveChangesAsync();
+
             return NoContent();
         }
 
@@ -51,8 +62,10 @@ namespace PrimerParcial.Controllers
         {
             var p = await _context.Products.FindAsync(id);
             if (p == null) return NotFound();
+
             _context.Products.Remove(p);
             await _context.SaveChangesAsync();
+
             return NoContent();
         }
     }

@@ -9,11 +9,15 @@ namespace PrimerParcial.Data
             : base(options)
         {
         }
-//test 
+
+        // DbSets usados por tus 3 controllers
         public DbSet<SupportTicket> SupportTickets { get; set; } = null!;
+        public DbSet<Event> Events { get; set; } = null!;
+        public DbSet<Product> Products { get; set; } = null!;
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            // ---------- SupportTicket ----------
             modelBuilder.Entity<SupportTicket>(e =>
             {
                 e.Property(p => p.Subject)
@@ -24,15 +28,51 @@ namespace PrimerParcial.Data
                     .HasMaxLength(255)
                     .IsRequired();
 
-                // Guarda enums como string para legibilidad (opcional)
-                e.Property(p => p.Severity).HasConversion<string>();
-                e.Property(p => p.Status).HasConversion<string>();
+                // Severity/Status son string (no enums)
+                e.Property(p => p.Severity)
+                    .HasMaxLength(50)
+                    .IsRequired();
 
-                // Índices útiles para filtros
+                e.Property(p => p.Status)
+                    .HasMaxLength(50)
+                    .IsRequired();
+
+                e.Property(p => p.AssignedTo)
+                    .HasMaxLength(100);
+
+                // Índices para consultas
                 e.HasIndex(p => p.Status);
                 e.HasIndex(p => p.Severity);
                 e.HasIndex(p => p.OpenedAt);
             });
+
+            // ---------- Event ----------
+            modelBuilder.Entity<Event>(e =>
+            {
+                e.Property(p => p.Title)
+                    .HasMaxLength(200)
+                    .IsRequired();
+
+                e.Property(p => p.Location)
+                    .HasMaxLength(200)
+                    .IsRequired();
+
+                e.Property(p => p.StartAt)
+                    .IsRequired();
+
+                // EndAt y Notes son opcionales por diseño
+                // e.Property(p => p.EndAt); // nullable
+                // e.Property(p => p.Notes); // nullable (texto libre)
+
+                // Índices útiles
+                e.HasIndex(p => p.StartAt);
+                e.HasIndex(p => p.IsOnline);
+            });
+
+            // ---------- Product ----------
+            // No imponemos restricciones extra porque tu controlador no las requiere.
+            // (Solo asegura que exista la entidad Product con su Id como PK convencional)
+            modelBuilder.Entity<Product>();
         }
     }
 }

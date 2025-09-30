@@ -23,4 +23,6 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+app.MapGet("/ping", () => Results.Ok("pong"));
+
 app.Run();
